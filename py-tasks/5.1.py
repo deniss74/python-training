@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 netw_templ = '\nNetwork:\n{0:<8} {1:<8} {2:<8} {3:<8}\n{0:<08b} {1:<08b} {2:<08b} {3:<08b}\n'
 mask_templ = "\nMask:\n/{}"
 

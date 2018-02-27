@@ -6,5 +6,5 @@ with open('ospf.txt', 'r') as f:
     for line in f:
         if line.startswith('O'):
             route = line.split()
-            print(templ1.format('\nProtocol:', 'OSPF', '\nPrefix:', route[1], '\nAD/Metric:', route[2], '\nNext-Hop:', route[4].strip(','), '\nLast update:', route[5].strip(','), '\nOutbound Interface:', route[6]))
+            print(templ1.format('\nProtocol:', 'OSPF', '\nPrefix:', route[1], '\nAD/Metric:', route[2], '\nNext-Hop:', route[4].rstrip(','), '\nLast update:', route[5].rstrip(','), '\nOutbound Interface:', route[6]))
 

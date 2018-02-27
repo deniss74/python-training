@@ -4,10 +4,13 @@ from sys import argv
 
 file = argv[1]
 
-ignore = ['duplex', 'alias', 'Current configuration']
+ignore = ['duplex', 'alias', 'Current configuration', '!']
 
 with open(file, 'r') as f:
     for line in f:
-        if line.startswith('!') != True:
+        for start in ignore:
+            if line.lstrip().startswith(start):
+                break
+        else:
             print(line.rstrip())
 
